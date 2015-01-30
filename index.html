@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>MYM Consulting Group</title>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/estilo.css">
+
+	<script>
+			$(document).ready(function(){
+
+				$('.itemServicios').addClass('animated zoomIn');
+				$('.itemServicios').on('click',function(){
+
+
+					$('.modal').modal('show');
+				});	
+				$('.botonCerrar span').on('click',function(){
+					$('.modal').modal('hide');
+
+				});
+			});
+			
+	</script>
+</head>
+<body>
+	<Header class="articlesCentro">
+		<figure id="logo"><img src="img/logo.png" alt="MYMCG"></figure>
+	</Header>
+	<section>
+		<article id="items" class="articlesCentro">
+			<div class="itemServicios">
+				<div class="titulo">Quienes Somos</div>
+				<div class="imagen"><img src="img/sample.jpg" alt=""></div>
+				<div class="pie"></div>
+			</div>
+			<div class="itemServicios">
+				<div class="titulo">Misión y Visión</div>
+				<div class="imagen"><img src="img/sample.jpg" alt=""></div>
+				<div class="pie"></div>
+			</div>
+			<div class="itemServicios">
+				<div class="titulo">Servicios</div>
+				<div class="imagen"><img src="img/sample.jpg" alt=""></div>
+				<div class="pie"></div>
+			</div>
+			<div class="itemServicios">
+				<div class="titulo">Contactenos</div>
+				<div class="imagen"><img src="img/sample.jpg" alt=""></div>
+				<div class="pie"></div>
+			</div>
+
+		</article>
+	</section>
+	<footer class="articlesCentro">
+		<p> MYM Consulting Group Ltda. - Napoleón 3565 Oficina 202, Las Condes - Santiago de Chile</p>
+	</footer>
+
+	<!----   Modal Servicios-->
+	<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-lg">
+	    <div class="modal-content">
+	      <div id="quienesSomos" class="modals">
+			<h3>Quienes Somos</h3>
+
+			<p><span class="sangria"></span>MYMCG Es una empresa creada por un grupo de profesionales y ejecutivos de empresas de vasta experiencia tanto en Chile como en el extranjero. Nace a raíz de la necesidad constante del mercado y de los intereses e inquietudes de sus socios por dar un completo servicio de Asesoría, en forma personal y seria, tanto a personas como empresas.</p>
+
+			<p><span class="sangria"></span>Ponemos a disposición de nuestros clientes un equipo multidisciplinario de profesionales, técnicos y asesores de primer nivel en las áreas Financiero Contables, Tributarias, y Laborales.</p>
+
+			<p><span class="sangria"></span>Nos caracterizamos por constituir una alternativa sumamente interesante para aquellas empresas y personas naturales que no cuentan con una debida asesoría, dado que ofrecemos un servicio totalmente diferenciado, basado en:</p>
+			<ul>
+				<li>Atención personalizada y exclusiva.</li>
+				<li>Alto grado de Compromiso.</li>
+				<li>Flexibilidad.</li>
+				<li>Capacitación y perfeccionamiento continuo de nuestros colaboradores y profesionales.</li>
+			</ul>
+			<div class="botonCerrar"> <span>[x]</span> </div>
+
+	</div>
+
+	<!-- Modal -->
+	    </div>
+	  </div>
+	</div>
+
+
+	
+</body>
+</html>
