@@ -11,14 +11,20 @@
 	<link rel="stylesheet" href="css/estilo.css">
 
 	<script>
+
+		 function muestraModal(valorEnviado)
+    		 {
+    		 	
+    		 	//var modalSeleccionado = "'#"+valorEnviado+"'";
+    		 	$('.modal').modal('hide');
+				$('#'+valorEnviado).modal('show');
+    		 }
+	</script>
+
+	<script>
 			$(document).ready(function(){
 
 				$('.itemServicios').addClass('animated zoomIn');
-				$('.itemServicios').on('click',function(){
-
-
-					$('.modal').modal('show');
-				});	
 				$('.botonCerrar span').on('click',function(){
 					$('.modal').modal('hide');
 
@@ -33,24 +39,24 @@
 	</Header>
 	<section>
 		<article id="items" class="articlesCentro">
-			<div class="itemServicios">
+			<div class="itemServicios" onclick="muestraModal('modalQuienesSomos')">
 				<div class="titulo">Quienes Somos</div>
-				<div class="imagen"><img src="img/sample.jpg" alt=""></div>
+				<div class="imagen"><img src="img/quienesSomos.png" alt=""></div>
 				<div class="pie"></div>
 			</div>
-			<div class="itemServicios">
+			<div class="itemServicios" onclick="muestraModal('modalMisionVision')">
 				<div class="titulo">Misión y Visión</div>
-				<div class="imagen"><img src="img/sample.jpg" alt=""></div>
+				<div class="imagen"><img src="img/misionVision.png" alt=""></div>
 				<div class="pie"></div>
 			</div>
-			<div class="itemServicios">
+			<div class="itemServicios" onclick="muestraModal('modalServicios')">
 				<div class="titulo">Servicios</div>
-				<div class="imagen"><img src="img/sample.jpg" alt=""></div>
+				<div class="imagen"><img src="img/servicios.png" alt=""></div>
 				<div class="pie"></div>
 			</div>
-			<div class="itemServicios">
+			<div class="itemServicios" onclick="muestraModal('modalAsesorias')">
 				<div class="titulo">Contactenos</div>
-				<div class="imagen"><img src="img/sample.jpg" alt=""></div>
+				<div class="imagen"><img src="img/contactenos.png" alt=""></div>
 				<div class="pie"></div>
 			</div>
 
@@ -58,10 +64,11 @@
 	</section>
 	<footer class="articlesCentro">
 		<p> MYM Consulting Group Ltda. - Napoleón 3565 Oficina 202, Las Condes - Santiago de Chile</p>
+		<p style="font-size : 8px; color : #666">Diseñado por rains.cl</p>
 	</footer>
 
 	<!----   Modal Servicios-->
-	<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+	<div id="modalQuienesSomos" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 	  <div class="modal-dialog modal-lg">
 	    <div class="modal-content">
 	      <div id="quienesSomos" class="modals">
@@ -78,11 +85,162 @@
 				<li>Flexibilidad.</li>
 				<li>Capacitación y perfeccionamiento continuo de nuestros colaboradores y profesionales.</li>
 			</ul>
-			<div class="botonCerrar"> <span>[x]</span> </div>
+			<div class="botonCerrar btn-primary"> <span>Cerrar[x]</span> </div>
 
+			</div>
+			</div>
+		</div>
 	</div>
 
-	<!-- Modal -->
+	<!-- Modal Misión y Visión-->
+
+	<div id="modalMisionVision" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-lg">
+	    <div class="modal-content">
+	      <div id="quienesSomos" class="modals">
+			<h3>Misión</h3>
+
+			<p><span class="sangria"></span>MYMCG ofrece a las pequeñas y medianas empresas soluciones integrales de contabilidad, recursos humanos, auditoria, asesoría tributaria y análisis financiero, de forma flexible y personalizada, con el fin de crear valor agregado al servicio, para así ayudar a desarrollar todo el potencial empresarial de nuestros colaboradores, adaptando y creando procesos según las necesidades específicas de nuestros clientes.</p>
+
+			<h3>Visión</h3>
+
+			<p><span class="sangria"></span>MYMCG se consolidará en una empresa líder en proveer soluciones integrales de contabilidad, recursos humanos, auditoria, asesoría tributaria y análisis financiero a las pequeñas y medianas empresas, apoyando e Impulsando el crecimiento económico de sus clientes.</p>
+
+
+			
+
+
+
+
+			<div class="botonCerrar btn-primary"> <span>Cerrar[x]</span> </div>
+
+			</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal Servicios-->
+		<div id="modalServicios" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-lg">
+	   <div class="modal-content modals">
+	  		 <!--<div id="servicios">
+	
+			 <div id="navegacionModalServicios">
+			      		<ul>
+			      			<li>Auditorias</li>
+			      			<li>Consultoria Tributaria</li>
+			      			<li>Outsourcing Contable</li>
+			      			<li>Recursos Humanos</li>
+			      		</ul>
+			  </div>
+
+			  <div id="panelDeContenido">
+			  	
+			  </div>
+		</div> -->
+		<div id="servicioAuditorias">
+		<h3>Auditorías</h3>
+	    		<p>Los Servicios de Auditoría proporcionados por MYM buscan fortalecer las
+				empresas mediante la evaluación y verificación de cumplimiento de normas, 
+				procedimientos, metas y resultados de gestión, practicado por profesionales 
+				expertos en auditoría.</p>
+
+				<p>Nuestros servicios de auditoría consideran principalmente:</p>
+			<ul>
+				<li>Auditoría de Estados Financieros.</li>
+				<li>Auditoría Interna.</li>
+				<li>Auditoría de Gestión y/u Operativa.</li>
+				<li>Informes Periciales.</li>
+				<li>Auditoría de Fraudes y Peritajes.</li>
+				<li>Auditorías Especiales y/o de Cumplimiento.</li>
+				<li>Auditoría de Calidad.</li>
+				<li>Otros Procesos de Revisión.</li>
+			</ul>
+	    </div>
+	    <div id="ServicioConsultoriaTributaria">
+	    <h3>Consultoría tributaria</h3>	
+	    	<p>Los Servicios de Consultoría Tributaria proporcionados por MYM buscan velar 
+			por el cumplimiento de los aspectos tributarios y legales que afecten a la 
+			empresa, evaluando y utilizando alternativas legales que puedan 
+			eventualmente minimizar la carga impositiva tanto para la empresa como para 
+			sus socios o accionistas; Nuestros servicios consideran principalmente:</p>
+			
+			<ul>
+
+			<li>Confección del Formulario 29 de la Sociedad.</li>
+			<li>Timbraje de Documentos ante el Servicio de Impuestos Internos.</li>
+			<li>Revisión  y Determinación de RLI, Capital Propio y FUT.</li>
+			<li>Confección de la Declaración de Impuesto a la Renta de la 
+			empresa.</li>
+			<li>Declaraciones Juradas (Honorarios, Remuneraciones, Retiros, 
+			Etc) .</li>
+			<li>Asesorías Tributarias Preventivas.</li>
+			<li>Asesoría en Regímenes Especiales.</li>
+			<li>Planificación Tributaria.</li>
+
+			</ul>
+	    </div>
+	    <div id="servicioOutsourcing">
+	    <h3>Outsourcing</h3>
+				<p>Los Servicios de Outsourcing Contable proporcionados por MYM están 
+				principalmente enfocados a la asesoria en Contabilidad General y a 
+				proporcionar Reportes Financieros de manera oportuna, para así servir de 
+				apoyo al proceso decicional de la compañía, estando siempre a la vanguardia 
+				de la normativa contable (IFRS, USGAP, SOX, NIIF, NIC, IFRIC, IAS); </p>
+
+				<p>Nuestros servicios consideran principalmente:</p>
+					<ul>
+					<li>Supervisiones Contables. </li>
+					<li>Regulaciones de Contabilidades.</li>
+					<li>Contabilidad:</li>
+						<ul>
+						<li>Análisis de Cuentas</li>
+						<li>Conciliación Bancaria</li>
+						<li>Contabilización de Documentos</li>
+						<li>Balances Periódicos</li>
+						<li>Estados de resultados</li>
+						</ul>
+					<li>Activos Fijos</li>
+					<li>Control de Inventarios</li>
+					<li>Trabajos Especiales.</li>
+					</ul>
+	    </div>
+
+	    <div id="ServicioRecursosHumanos">
+	    <h3>Recursos Humanos</h3>
+	    	<p>Los Servicios de Recursos Humanos pproporcionados por MYM están 
+			pensados con la finalidad de entregar a nuestros clientes un servicio integral 
+			orientado a facilitar el proceso de administración y pago de remuneraciones de 
+			su personal, con los conceptos de asesoría laboral, confiabilidad y 
+			adaptabilidad a las necesidades de su empresa; Nuestros servicios consideran 
+			principalmente:</p>
+
+			<ul>
+				<li>Cálculo de remuneraciones y Emisi?n de liquidaciones de 
+				sueldos de sus empleados y ejecutivos.</li>
+				<li>Preparación de formularios de pago de Leyes Sociales.</li>
+				<li>Emisión Libro de Remuneraciones.</li>
+				<li>Revisión de Impuesto único de Segunda Categoría y
+				cumplimiento laboral.</li>
+				<li>Cálculo de Finiquitos.</li>
+				<li>Asesoría Laboral.</li>
+							
+			</ul>
+
+	    </div>	
+
+		<div class="botonCerrar btn-primary"> <span>Cerrar[x]</span> </div>
+
+		</div> 
+	</div>
+	
+
+
+
+
+
+
+
 	    </div>
 	  </div>
 	</div>
